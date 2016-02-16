@@ -25,6 +25,7 @@
 }
 
 .jquery-layer a{outline: none;}
+.jquery-layer a:hover{text-decoration: none;}
 
 .jquery-layer-tip{
     -webkit-animation-duration:0.5s;
