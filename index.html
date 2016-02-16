@@ -8,6 +8,9 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.layer.min.css" media="screen">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.layer.min.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -32,14 +35,17 @@
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.layer.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <h1>
-<a id="tip" class="anchor" href="#tip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tip</h1>
+<a id="tip" class="anchor" href="#tip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tip </h1>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">layer</span>.<span class="pl-en">tip</span>(<span class="pl-s"><span class="pl-pds">'</span>tip a message!<span class="pl-pds">'</span></span>);</pre></div>
+<button id="layer_tip">试一下</button>
 
 <h1>
 <a id="alert" class="anchor" href="#alert" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>alert</h1>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">layer</span>.<span class="pl-c1">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>弹出层<span class="pl-pds">'</span></span>);</pre></div>
+
+<button id="layer_alert">试一下</button>
 
 <h1>
 <a id="confirm" class="anchor" href="#confirm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>confirm</h1>
@@ -47,6 +53,9 @@
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">$</span>.<span class="pl-smi">layer</span>.<span class="pl-c1">confirm</span>(<span class="pl-s"><span class="pl-pds">'</span>请确认操作？<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(){
     <span class="pl-en">alert</span>(<span class="pl-s"><span class="pl-pds">'</span>已经确认<span class="pl-pds">'</span></span>);
 });</pre></div>
+
+<button id="layer_confirm">试一下</button>
+
 
 <h1>
 <a id="iframe" class="anchor" href="#iframe" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>iframe</h1>
@@ -57,6 +66,8 @@
     width <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>70%<span class="pl-pds">'</span></span>,
     height <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>80%<span class="pl-pds">'</span></span>
 });</pre></div>
+
+<button id="layer_iframe">试一下</button>
 
 <h1>
 <a id="box" class="anchor" href="#box" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>box</h1>
@@ -79,6 +90,8 @@
     }
 });</pre></div>
 
+<button id="layer_box">试一下</button>
+
 <h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
 
@@ -93,6 +106,6 @@ Licensed under the <a href="https://github.com/umdjs/umd/blob/master/LICENSE.md"
 
     </section>
 
-  
+    <script type="text/javascript" src="javascripts/main.js"></script>
   </body>
 </html>
