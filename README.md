@@ -2,7 +2,7 @@
 
 
 # Getting Started
-Add the stylesheet, jquery and jquery.layer plugin in you web page.
+Add the stylesheet, jquery and jquery.layer plugin in you web page. [see demo](http://kyo4311.github.io/jquery.layer/)
 ```html
 <link rel="stylesheet" href="jquery.layer.min.css" />
 <script src="jquery.js"></script>
