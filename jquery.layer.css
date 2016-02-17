@@ -106,7 +106,8 @@
     padding: 0 15px 15px 15px;
 }
 
-.jquery-layer-btn{
+a.jquery-layer-btn,
+a.jquery-layer-btn:hover{
     display: inline-block;
     height: 28px;
     line-height: 28px;
@@ -120,7 +121,8 @@
     color: #333;
 }
 
-.jquery-layer-btn-blue{
+a.jquery-layer-btn-blue,
+a.jquery-layer-btn-blue:hover{
     border-color: #4898d5;
     background-color: #2e8ded;
     color: #fff;
