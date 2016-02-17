@@ -1,3 +1,10 @@
+/*!
+ * The jQuery Plugin of layer
+ * http://kyo4311.github.io/jquery.layer/
+ * Copyright guosheng
+ * Released under the MIT license
+ */
+
 (function() {
     var maskDiv = $('<div class="jquery-layer-mask"></div>');
     var tipDiv = $('<div class="jquery-layer-tip zoomIn"></div>');
@@ -133,7 +140,6 @@
         return box;
     }
 
-
     function __box(opt) {
         var funcs = {};
         var html = wrapDiv(getHeader(), getContent(), getFooter(opt.btns));
@@ -158,7 +164,6 @@
         }
         return html;
     }
-
 
     function _template(template, data) {
         return template.replace(/#\{([\s\S]+?)\}/g, function(a, b) {
