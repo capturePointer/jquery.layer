@@ -140,6 +140,36 @@
         return box;
     }
 
+
+    function __form(opt) {
+        var box;
+        opt.btns = ['提交'];
+        opt.callback = function(listen) {
+            listen('提交', function(close, serialize, serializeArray) {
+                if (opt.beforeSubmit) {
+                    var res = opt.beforeSubmit.call(box, serialize, serializeArray);
+                    if (res === false) {
+                        return;
+                    }
+                }
+                $.post(opt.postUrl, serialize, function(data) {
+                    if (opt.postSuccess) {
+                        opt.postSuccess.call(null, close, data);
+                    }
+                });
+            });
+        };
+        //取数据
+        if (opt.getUrl) {
+            $.get(opt.getUrl, function(res) {
+                opt.content = _template(opt.content, res);
+                box = __box(opt).find('.jquery-layer-btn-0').focus().addClass('jquery-layer-btn-blue').end();
+            });
+        }
+
+        return box;
+    }
+
     function __box(opt) {
         var funcs = {};
         var html = wrapDiv(getHeader(), getContent(), getFooter(opt.btns));
@@ -152,7 +182,7 @@
                 if (typeof func === 'function') {
                     func.call(box, function() {
                         removeDiv(box);
-                    }, form.serialize());
+                    }, form.serialize(), form.serializeArray());
                 }
             });
         });
@@ -179,7 +209,8 @@
             box: __box,
             confirm: __confirm,
             alert: __alert,
-            iframe: __iframe
+            iframe: __iframe,
+            form: __form
         }
     });
 }());
