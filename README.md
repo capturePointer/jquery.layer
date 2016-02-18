@@ -56,6 +56,33 @@ $.layer.box({
 });
 ```
 
+# form
+```js
+$.layer.form({
+    title: '修改用户',
+    content: '<div><input value="#{name}"></div>',  //这里模板
+    getUrl: 'url', //取数据接口会用get
+    postUrl: 'url', //存数据接口会用post
+    //提交之前
+    beforeSubmit: function(serialize, serializeArray) {
+        //console.log(serialize, serializeArray); //表单数组
+        //console.log(this); //this指向弹出的层
+        return true; //return false将不会被提交
+    },
+    postSuccess: function(close, data) { //保存成功
+        // data是长这样子的
+        //{
+        //    name : 'zhangsan'    
+        //}
+
+        if (!data.error) {
+            close();
+            table.init();
+        }
+    }
+});
+```
+
 
 # License
 Copyright (c) 2016 guosheng 
