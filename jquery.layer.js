@@ -165,6 +165,9 @@
                 opt.content = _template(opt.content, res);
                 box = __box(opt).find('.jquery-layer-btn-0').focus().addClass('jquery-layer-btn-blue').end();
             });
+        } else {
+            opt.content = _template(opt.content, {});
+            box = __box(opt).find('.jquery-layer-btn-0').focus().addClass('jquery-layer-btn-blue').end();
         }
 
         return box;
@@ -197,7 +200,7 @@
 
     function _template(template, data) {
         return template.replace(/#\{([\s\S]+?)\}/g, function(a, b) {
-            return data[b];
+            return data[b] || '';
         });
     }
 
